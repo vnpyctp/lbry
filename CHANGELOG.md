@@ -25,16 +25,6 @@ at anytime.
   * `blob_list` failing with --uri parameter (https://github.com/lbryio/lbry/issues/895)
   * `get` failing with a non-useful error message when given a uri for a channel claim
   * exception checking in several wallet unit tests
-  * Fixed unnecessarily verbose exchange rate error (https://github.com/lbryio/lbry/issues/984)
-  * Merged two separate dht test folders into one
-  * Fixed value error due to a race condition when saving to the claim cache (https://github.com/lbryio/lbry/issues/1013)
-  * Fixed being unable to re-download updated content (#951)
-  * Fixed sending error messages for failed api requests
-  * Fixed the file manager startup being slow when handling thousands of files
-  * Fixed handling decryption error for blobs encrypted with an invalid key
-  * Fixed handling stream with no data blob (https://github.com/lbryio/lbry/issues/905)
-  * Fixed fetching the external ip
-  * Fixed API call to blob_list with --uri parameter (https://github.com/lbryio/lbry/issues/895)
   * Fixed publish command to allow updating claims with bid amount higher than wallet balance(by spending the claimtrietx coin) (https://github.com/lbryio/lbry/issues/748)
 
 ### Deprecated

@@ -2002,6 +2002,12 @@ class Daemon(AuthJSONRPCServer):
         if bid <= 0.0:
             raise Exception("Invalid bid")
 
+        amt = yield self.session.wallet.get_max_usable_balance_for_claim(name)
+        if bid > amt:
+            raise InsufficientFundsError(
+                "Please lower the bid value, the max amount you can specify for this claim is {}"
+                .format(amt))
+
         metadata = metadata or {}
         if fee is not None:
             metadata['fee'] = fee
